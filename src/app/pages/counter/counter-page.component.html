@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Angular</title>
+</head>
+<body>
+  <div class="container mt-3 justify-content-center text-center">
+    <h1>Angular</h1>
+    <p>Counter signal: {{ counterSignal() }}</p>
+    <p>Contador: {{ counter }}</p>
+    <div>
+        <button (click)="decrement(1)">-1</button>
+        <button (click)="reset()">Reset</button>
+        <button (click)="increment(1)">+1</button>
+    </div>
+  </div>
+
+</body>
+</html>

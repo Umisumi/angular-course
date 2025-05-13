@@ -1,0 +1,18 @@
+<h3>{{ listName() }}</h3>
+<ul>
+  <!-- Manejo de Iteraciones(@for) y Condicionales(@if) -->
+  @for (character of characters(); track character.id) {
+    @if (character.power > 7000) {
+      <li>
+        <span>{{ character.name }}</span>
+        <strong [class.text-danger]="character.power >= 10000" [class.text-primary]="character.power < 10000">
+          - {{ character.power }}
+        </strong>
+      </li>
+    } @else {
+      <li>
+        <strong>Personaje inferior</strong>
+      </li>
+    }
+  }
+</ul>

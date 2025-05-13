@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragonball</title>
+</head>
+<body>
+  <h1>DragonBall Super Page</h1>
+  <hr />
+
+  <section class="row">
+    <div class="col-12 col-sm-6">
+      <app-add-character
+        (newCharacter)="dragonballService.addCharacterArregloPadre($event)"
+      />
+    </div>
+    <div class="col-12 col-sm-6">
+      <app-character-list
+      listName="Lista de personajes"
+      [characters]="dragonballService.characters()"/>
+    </div>
+  </section>
+</body>
+</html>
